@@ -1,1 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Attempted Games - Coming Soon</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
+  <div id="particles-js"></div>
+
+  <div class="content">
+    <img src="logo.png" alt="Attempted Games Logo" class="logo-image" />
+    <div class="logo-text">Attempted Games</div>
+    <h1>Website Coming Soon</h1>
+    <h2>We are an upcoming game studio based in the UK. Stay tuned for exciting updates and announcements!</h2>
+  </div>
+
+  <div class="footer">&copy; <span id="year"></span> Attempted Games. All rights reserved.</div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": { "value": 30, "density": { "enable": true, "value_area": 900 } },
+        "color": { "value": "#ffffff" },
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.5 },
+        "size": { "value": 3, "random": true },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#ffffff",
+          "opacity": 0.3,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 1.5,
+          "out_mode": "out"
+        }
+      },
+      "interactivity": {
+        "events": {
+          "onhover": {
+            "enable": true,
+            "mode": "repulse"
+          }
+        }
+      },
+      "retina_detect": true
+    });
+  </script>
+
+</body>
+</html>
