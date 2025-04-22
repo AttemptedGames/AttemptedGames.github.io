@@ -8,46 +8,56 @@
 </head>
 <body>
 
-  <div id="particles-js"></div>
+	<div id="particles-js"></div>
 
-  <div class="content">
-    <img src="logo.png" alt="Attempted Games Logo" class="logo-image" />
-    <div class="logo-text">Attempted Games</div>
-    <h1>Website Coming Soon</h1>
-    <h2>We are an upcoming game studio based in the UK. Stay tuned for exciting updates and announcements!</h2>
-  </div>
+	<div class="content">
+		<img src="logo.png" alt="Attempted Games Logo" class="logo-image" />
+		<div class="logo-text">Attempted Games</div>
+		<h1>Website Coming Soon</h1>
+		<h2>We are an upcoming game studio based in the UK. Stay tuned for exciting updates and announcements!</h2>
+	</div>
 
   <div class="footer">&copy; <span id="year"></span> Attempted Games. All rights reserved.</div>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+	<script>
+		document.getElementById('year').textContent = new Date().getFullYear();
+	</script>
 
-  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-  <script>
-    particlesJS("particles-js", {
-      "particles": {
-        "number": { "value": 150, "density": { "enable": true, "value_area": 900 } },
-        "color": { "value": "#ffffff" },
-        "shape": { "type": "circle" },
-        "opacity": { "value": 0.2 },
-        "size": { "value": 3, "random": true },
-        "line_linked": {
-          "enable": false,
-          "distance": 150,
-          "color": "#ffffff",
-          "opacity": 0.1,
-          "width": 1
-        },
-        "move": {
-          "enable": true,
-          "speed": 1.5,
-          "out_mode": "out"
-        }
-      },
-      "retina_detect": true
-    });
-  </script>
+	<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+	<script>
+		particlesJS("particles-js", {
+		"particles": {
+			"number": { "value": 150, "density": { "enable": true, "value_area": 900 } },
+			"color": { "value": "#ffffff" },
+			"shape": { "type": "circle" },
+			"opacity": { "value": 0.2 },
+			"size": { "value": 3, "random": true },
+			"line_linked": {
+			"enable": false,
+			"distance": 150,
+			"color": "#ffffff",
+			"opacity": 0.1,
+			"width": 1
+			},
+			"move": {
+			"enable": true,
+			"speed": 1.5,
+			"out_mode": "out"
+			}
+		},
+		"retina_detect": true
+		});
+	</script>
+
+	<script>
+		function setVH() {
+			let vh = window.innerHeight * 0.01;
+			document.documentElement.style.setProperty('--vh', `${vh}px`);
+		}
+		window.addEventListener('resize', setVH);
+		window.addEventListener('orientationchange', setVH);
+		setVH();
+	</script>
 
 </body>
 </html>
